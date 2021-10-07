@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical"
-    android:background="#FAE100">
+    android:background="@color/kakaoYellow">
 
 
     <ImageView
@@ -27,7 +27,7 @@
         android:textSize="25dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:background="#FAE100"/>
+        android:background="@color/kakaoYellow"/>
     <Button
         android:id="@+id/btn_easy_login"
         android:layout_width="match_parent"
@@ -39,15 +39,14 @@
         android:textSize="25dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:background="#FAE100"/>
+        android:background="@color/kakaoYellow"/>
     <TextView
         android:id="@+id/tv_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="회원가입 하기"
         android:textSize="22dp"
-        android:textColor="@color/black"
-        android:layout_marginStart="140dp"
-        android:layout_marginEnd="140dp"
+        android:gravity="center"
+        android:textColor="#808080"
         android:layout_marginTop="20dp"/>
 </LinearLayout>
