@@ -28,6 +28,6 @@ class RegisterActivity : AppCompatActivity() {
         var userName = editRegisterName.text.toString()
         var userBirth = editRegisterBirth.text.toString()
 
-        
+
     }
 }
