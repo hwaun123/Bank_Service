@@ -41,11 +41,12 @@
 
         <Button
             android:id="@+id/btn_id_overlapcheck"
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:background="@color/kakaoYellow"
             android:text="중복확인"
-            android:textSize="17dp"/>
+            android:textSize="17dp" />
     </LinearLayout>
 
     <TextView
@@ -133,6 +134,5 @@
         android:layout_height="wrap_content"
         android:text="회원가입"
         android:textSize="25dp"
-        android:background="@color/kakaoYellow"
         android:layout_gravity="center"/>
 </LinearLayout>
