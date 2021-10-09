@@ -11,6 +11,10 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         val ivBack:ImageView = findViewById(R.id.iv_register_back)
+        ivBack.setOnClickListener {
+            finish()
+        }
+
 
         val editRegisterId: EditText = findViewById(R.id.edit_register_id)
         val editRegisterPw: EditText = findViewById(R.id.edit_register_pw)
@@ -18,9 +22,9 @@ class RegisterActivity : AppCompatActivity() {
         val editRegisterName: EditText = findViewById(R.id.edit_register_name)
         val editRegisterBirth: EditText = findViewById(R.id.edit_register_birth)
 
-        ivBack.setOnClickListener {
-            finish()
-        }
+        val registerUrl:String = "http://34.64.251.169:8081/auth/register"
+
+
 
         var userId = editRegisterId.text.toString()
         var userPw = editRegisterPw.text.toString()
