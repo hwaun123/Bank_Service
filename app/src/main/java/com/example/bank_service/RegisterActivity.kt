@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +24,10 @@ class RegisterActivity : AppCompatActivity() {
         val editRegisterName: EditText = findViewById(R.id.edit_register_name)
         val editRegisterBirth: EditText = findViewById(R.id.edit_register_birth)
 
-        val registerUrl:String = "http://34.64.251.169:8081/auth/register"
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://34.64.251.169:8081/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
 
 
 
