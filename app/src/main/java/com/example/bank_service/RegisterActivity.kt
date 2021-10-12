@@ -69,7 +69,11 @@ class RegisterActivity : AppCompatActivity() {
                 }
             })
         }
-        
+
+        val idOverlapCheck: Button = findViewById(R.id.btn_id_overlapcheck) // 아이디 중복확인
+        idOverlapCheck.setOnClickListener{
+
+        }
 
     }
 }
