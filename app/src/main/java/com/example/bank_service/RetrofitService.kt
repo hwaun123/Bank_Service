@@ -5,7 +5,7 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface RetrofitService {
-    
+
     @POST("auth/register")
     fun register(
         @Body register: Register
