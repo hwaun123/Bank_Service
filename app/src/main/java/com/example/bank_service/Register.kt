@@ -1,11 +1,17 @@
 package com.example.bank_service
 
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 class Register(
-    var userId:String,
-    var userPw:String,
-    var userPhone:String,
-    var userName:String,
-    var userBirth:String
+    @SerializedName("id")
+    var id:String,
+    @SerializedName("pw")
+    var pw:String,
+    @SerializedName("phone")
+    var phone:String,
+    @SerializedName("name")
+    var name:String,
+    @SerializedName("birth")
+    var birth:String
 ) : Serializable

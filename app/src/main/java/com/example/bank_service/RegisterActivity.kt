@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,31 +32,35 @@ class RegisterActivity : AppCompatActivity() {
 
 
         val retrofit = Retrofit.Builder() // 레트로핏 연결
-            .baseUrl("http://34.64.251.169:8081/")
+            .baseUrl("http://34.64.165.105:8080/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val service = retrofit.create(RetrofitService::class.java)
 
-        val userId = editRegisterId.text.toString() // 회원가입 객체들
-        val userPw = editRegisterPw.text.toString()
-        val userPN = editRegisterPN.text.toString()
-        val userName = editRegisterName.text.toString()
-        val userBirth = editRegisterBirth.text.toString()
-
         val btnRegisterConnfirmed:Button = findViewById(R.id.btn_register_confirmed) // 회원가입 확인 버튼
 
         btnRegisterConnfirmed.setOnClickListener{
-            service.register(Register(userId,userPw,userPN,userName,userBirth)).enqueue(object : Callback<Any?> {
+
+            val id = editRegisterId.text.toString() // 회원가입 객체들
+            val pw = editRegisterPw.text.toString()
+            val phone = editRegisterPN.text.toString()
+            val name = editRegisterName.text.toString()
+            val birth = editRegisterBirth.text.toString()
+
+            service.register(Register(id, pw, phone, name, birth)).enqueue(object : Callback<Any?> {
                 override fun onResponse(call: Call<Any?>, response: Response<Any?>) {
                     val code = response.code()
+                    Log.d("retrofitt", "통신 $code id $id pw $pw pn $phone name $name birth $birth")
                     if(response.isSuccessful){
-                        val messege = response.body().toString()
-                        Toast.makeText(this@RegisterActivity,"회원가입 성공",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@RegisterActivity,"회원가입이 완료되었습니다",Toast.LENGTH_SHORT).show()
+                        Log.d("retrofitt", "통신성공 회원가입 완료")
+                        finish()
                     }
                     else if(code == 403) {
-                        val messege = response.body().toString()
-                        Toast.makeText(this@RegisterActivity,"중복된 계정이 존재 합니다",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@RegisterActivity,"중복된 계정입니다",Toast.LENGTH_SHORT).show()
+                        Log.d("retrofitt", "통신성공 중복된 계정")
+                        finish()
                     }
                 }
 
@@ -64,6 +69,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
             })
         }
+        
 
     }
 }
