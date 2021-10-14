@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/edit_login_id"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="15dp"
+            android:inputType="textPersonName"
+            android:hint="아이디를 입력하세요" />
+
+        <EditText
+            android:id="@+id/edit_login_pw"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="15dp"
+            android:inputType="textPassword"
+            android:hint="비밀번호를 입력 하세요" />
+
+        <Button
+            android:id="@+id/btn_login_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Log in"
+            android:background="@color/kakaoYellow"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -8,7 +8,11 @@ import android.widget.TextView
 
 class LoginActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val loginDialog:LoginDialog
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
@@ -20,7 +24,10 @@ class LoginActivity : AppCompatActivity() {
 
         val btnLogin:Button = findViewById(R.id.btn_login)
         btnLogin.setOnClickListener{
+            val dialog = LoginDialog(this)
+            dialog.showDialog()
 
         }
     }
+
 }
