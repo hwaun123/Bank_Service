@@ -11,4 +11,8 @@ interface RetrofitService {
         @Body register: Register
     ): Call<Any?>
 
+    @POST("auth/login")
+    fun login(
+        @Body login: Login
+    ): Call<Any?>
 }

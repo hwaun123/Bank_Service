@@ -23,7 +23,14 @@ class LoginDialog(context: Context)
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
         dialog.show()
-        
+
+        val btnLoginConfirm: Button = dialog.findViewById(R.id.btn_login_confirm)
+        btnLoginConfirm.setOnClickListener{
+            val id = dialog.findViewById<EditText>(R.id.edit_login_id).text.toString()
+            val pw = dialog.findViewById<EditText>(R.id.edit_login_pw).text.toString()
+
+
+        }
 
     }
 
