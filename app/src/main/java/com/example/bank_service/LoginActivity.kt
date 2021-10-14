@@ -3,6 +3,7 @@ package com.example.bank_service
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
 class LoginActivity : AppCompatActivity() {
@@ -15,6 +16,11 @@ class LoginActivity : AppCompatActivity() {
         tvRegister.setOnClickListener{
             val registerIntent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(registerIntent)
+        }
+
+        val btnLogin:Button = findViewById(R.id.btn_login)
+        btnLogin.setOnClickListener{
+
         }
     }
 }

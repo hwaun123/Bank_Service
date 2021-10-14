@@ -58,9 +58,8 @@ class RegisterActivity : AppCompatActivity() {
                         finish()
                     }
                     else if(code == 403) {
-                        Toast.makeText(this@RegisterActivity,"중복된 계정입니다",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@RegisterActivity,"입력하신 아이디가 존재 합니다.",Toast.LENGTH_SHORT).show()
                         Log.d("retrofitt", "통신성공 중복된 계정")
-                        finish()
                     }
                 }
 
@@ -70,10 +69,6 @@ class RegisterActivity : AppCompatActivity() {
             })
         }
 
-        val idOverlapCheck: Button = findViewById(R.id.btn_id_overlapcheck) // 아이디 중복확인
-        idOverlapCheck.setOnClickListener{
-
-        }
 
     }
 }
