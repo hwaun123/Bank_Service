@@ -46,8 +46,8 @@ class LoginDialog(private val context: Context)
             val id = dialog.findViewById<EditText>(R.id.edit_login_id).text.toString()
             val pw = dialog.findViewById<EditText>(R.id.edit_login_pw).text.toString()
 
-            service.login(Login(id,pw)).enqueue(object : Callback<Any?>{
-                override fun onResponse(call: Call<Any?>, response: Response<Any?>) {
+            service.login(Login(id,pw)).enqueue(object : Callback<Userinfor?>{
+                override fun onResponse(call: Call<Userinfor?>, response: Response<Userinfor?>) {
                     val code = response.code()
                     Log.d("LoginRetrofit","code = $code")
                     Log.d("LoginResponsee","data = ${response.body()}")
@@ -62,9 +62,11 @@ class LoginDialog(private val context: Context)
 
                 }
 
-                override fun onFailure(call: Call<Any?>, t: Throwable) {
+                override fun onFailure(call: Call<Userinfor?>, t: Throwable) {
                     Log.d("LoginRetrofit","연결 실패")
                 }
+
+
             })
         }
 

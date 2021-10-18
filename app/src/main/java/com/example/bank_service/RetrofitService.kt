@@ -14,5 +14,5 @@ interface RetrofitService {
     @POST("auth/login")
     fun login(
         @Body login: Login
-    ): Call<Any?>
+    ): Call<Userinfor?>
 }
