@@ -50,11 +50,11 @@ class LoginDialog(private val context: Context)
                 override fun onResponse(call: Call<Any?>, response: Response<Any?>) {
                     val code = response.code()
                     Log.d("LoginRetrofit","code = $code")
+                    Log.d("LoginResponse","data = ${response.body()}")
                     if(code == 200) {
                         Toast.makeText(context,"로그인 성공!",Toast.LENGTH_SHORT).show()
                         val intent = Intent(context,MainActivity::class.java)
                         context.startActivity(intent)
-
                     }
                     else if (code == 401){
                         Toast.makeText(context,"아이디나 비밀번호를 다시 확인해 주세요",Toast.LENGTH_SHORT).show()
