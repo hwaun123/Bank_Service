@@ -5,5 +5,7 @@ data class AccountObject(
     var money: Int? = 0,
     var password: String? = null,
     var userPhone: String? = null,
-    var user: String? = null
+    var user: String? = null,
+    var receive: Receive? = null,
+
 )
