@@ -6,4 +6,7 @@ data class User(
     var pw: String? = null,
     var name: String? = null,
     var birth: String? = null,
+    var authentication: Authentication? = null,
+    var account: Account? = null,
+    var myAccount: MyAccount? = null,
 )

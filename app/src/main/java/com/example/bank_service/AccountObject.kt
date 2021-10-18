@@ -7,5 +7,5 @@ data class AccountObject(
     var userPhone: String? = null,
     var user: String? = null,
     var receive: Receive? = null,
-
+    var send: Send? = null
 )
