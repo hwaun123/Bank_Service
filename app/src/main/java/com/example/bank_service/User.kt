@@ -7,27 +7,3 @@ class User(
 
 
 )
-
-class Data(
-
-)
-
-class user(
-
-)
-
-class authentication(
-
-)
-
-class account(
-
-)
-
-class send (
-
-)
-
-class myAccount (
-    
-)
