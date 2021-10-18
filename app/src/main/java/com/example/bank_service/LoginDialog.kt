@@ -50,7 +50,7 @@ class LoginDialog(private val context: Context)
                 override fun onResponse(call: Call<Any?>, response: Response<Any?>) {
                     val code = response.code()
                     Log.d("LoginRetrofit","code = $code")
-                    Log.d("LoginResponse","data = ${response.body()}")
+                    Log.d("LoginResponsee","data = ${response.body()}")
                     if(code == 200) {
                         Toast.makeText(context,"로그인 성공!",Toast.LENGTH_SHORT).show()
                         val intent = Intent(context,MainActivity::class.java)
