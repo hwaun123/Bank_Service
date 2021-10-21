@@ -18,6 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class LoginDialog(private val context: Context)
 {
+
     private val dialog = Dialog(context)
     private lateinit var onClickListener: OnDialogClickListener
 
@@ -48,6 +49,7 @@ class LoginDialog(private val context: Context)
 
             service.login(Login(id,pw)).enqueue(object : Callback<Userinfor?>{
                 override fun onResponse(call: Call<Userinfor?>, response: Response<Userinfor?>) {
+                    App.prefs.token = response.body()?.data?.token
                     val code = response.code()
                     Log.d("LoginRetrofit","code = $code")
                     Log.d("LoginResponsee","data = ${response.body()}")
