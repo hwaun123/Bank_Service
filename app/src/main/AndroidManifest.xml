@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -14,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bank_Service"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.LoginDialog"></activity>
-
+        <activity android:name=".activity.EasyRegisterActivity"></activity>
+        <activity android:name=".activity.LoginDialog" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.LoginActivity">
             <intent-filter>
@@ -24,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
     </application>
 
 </manifest>
