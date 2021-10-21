@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import okhttp3.OkHttpClient
+import com.example.bank_service.data_class.Register
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -28,6 +28,8 @@ class LoginActivity : AppCompatActivity() {
             dialog.showDialog()
 
         }
+        
+
     }
 
 }

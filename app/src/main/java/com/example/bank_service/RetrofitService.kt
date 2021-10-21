@@ -1,5 +1,8 @@
 package com.example.bank_service
 
+import com.example.bank_service.data_class.Login
+import com.example.bank_service.data_class.Register
+import com.example.bank_service.data_class.Userinfor
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST

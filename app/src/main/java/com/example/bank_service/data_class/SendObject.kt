@@ -1,4 +1,4 @@
-package com.example.bank_service
+package com.example.bank_service.data_class
 
 data class SendObject(
     var idx: Int? = 0,
