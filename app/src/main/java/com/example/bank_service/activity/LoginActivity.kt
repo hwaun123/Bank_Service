@@ -1,17 +1,18 @@
-package com.example.bank_service
+package com.example.bank_service.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.bank_service.R
 
 class LoginActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val loginDialog:LoginDialog
+        val loginDialog: LoginDialog
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)

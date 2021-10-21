@@ -1,4 +1,4 @@
-package com.example.bank_service
+package com.example.bank_service.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import com.example.bank_service.R
+import com.example.bank_service.RetrofitService
 import com.example.bank_service.data_class.Register
 import retrofit2.Call
 import retrofit2.Callback
