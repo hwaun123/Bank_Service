@@ -37,5 +37,31 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/edit_easyregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="6자리 숫자를 입력하세요"
+            android:textSize="25dp"/>
+
+        <Button
+            android:id="@+id/btn_easy_register_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="확인"/>
+
+    </LinearLayout>
+
+
+
+
+
 
 </LinearLayout>
