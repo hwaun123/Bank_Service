@@ -5,6 +5,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bank_service.AuthInterceptor
 import com.example.bank_service.R
@@ -39,7 +40,7 @@ class EasyRegisterActivity : AppCompatActivity() {
         }
 
         val service = retrofit.create(RetrofitService::class.java)
-
+        easyRegisterConfirm.performClick()
         easyRegisterConfirm.setOnClickListener{
             var easyRegisterPw: String = editEasyRegister.text.toString()
             service.easyRegister(Key(easyRegisterPw)).enqueue(object : Callback<Any?> {
@@ -48,7 +49,11 @@ class EasyRegisterActivity : AppCompatActivity() {
                     Log.d("EasyRegisterRetrofit","data = ${response.body()}")
                     Log.d("EasyRegisterRetrofit","pw" + easyRegisterPw)
                     if(response.isSuccessful){
-
+                        Toast.makeText(this@EasyRegisterActivity,"간편로그인 설정 완료",Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
+                    else {
+                        Toast.makeText(this@EasyRegisterActivity,"다시한번 클릭해 주세요",Toast.LENGTH_SHORT).show()
                     }
                 }
 
