@@ -55,11 +55,9 @@ class LoginDialog(private val context: Context)
 
                     val code = response.code()
                     Log.d("LoginRetrofit","code = $code")
-                    Log.d("LoginResponsee","data = ${response.body()}")
-
+                    Log.d("LoginResponsee","loginToken = ${response.body()?.data?.token}")
                     if(code == 200) {
                         App.prefs.token = response.body()?.data?.token
-                        Log.d("LoginResponsee","token ${App.prefs.token}")
                         Log.d("LoginResponsee","token ${App.prefs.token}")
                         Toast.makeText(context,"로그인 성공!",Toast.LENGTH_SHORT).show()
                         val intent = Intent(context, MainActivity::class.java)
