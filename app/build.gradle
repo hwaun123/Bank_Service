@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.bank_service"
-        minSdkVersion 28
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"

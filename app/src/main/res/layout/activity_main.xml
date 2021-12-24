@@ -26,7 +26,7 @@
             android:id="@+id/tv_userinfo_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="username"
+            android:text="서민교님"
             android:textSize="35dp"
             android:layout_marginLeft="10dp"
             android:layout_gravity="center"
